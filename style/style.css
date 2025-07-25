@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body, html {
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+  }
+
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 2; /* Asegura que el header esté por encima de la imagen */
+}
+
+header .logo {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .menu-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+header .menu-btn:hover {
+    background: #ff4c4c; /* Cambia el color al pasar el mouse */
+}
+
+  .hero {
+    position: relative; /* Asegura que los elementos hijos se posicionen relativos a este contenedor */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img {
+    position: absolute; /* Posiciona la imagen dentro del contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    z-index: -1; /* Envía la imagen detrás del texto */
+    filter: blur(3px); /* Aplica un efecto de difuminado a la imagen */
+}
+
+.hero {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    height: 100vh; /* Asegura que la sección ocupe toda la altura de la pantalla */
+    position: relative;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    color: white;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 4px;
+    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+    margin-bottom: 0; /* Elimina cualquier margen inferior */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    font-family: 'Playfair Display', serif; /* Misma tipografía que el h1 */
+    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+    margin-top: 0; /* Elimina cualquier margen superior */
+}
+
+.menu-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    padding: 100px;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 4rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+
+    header {
+        padding: 10px 20px; /* Reduce el padding del header */
+    }
+
+    .menu-section h2 {
+        font-size: 2rem; /* Reduce el tamaño del título de la sección de menú */
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta las columnas para pantallas pequeñas */
+        gap: 15px; /* Reduce el espacio entre los elementos */
+    }
+
+    .menu-item {
+        padding: 10px; /* Reduce el padding interno de los elementos */
+        border-radius: 8px; /* Ajusta los bordes redondeados */
+    }
+
+    .menu-item img {
+        height: 150px; /* Reduce la altura de las imágenes */
+    }
+
+    .menu-item h3 {
+        font-size: 1.2rem; /* Reduce el tamaño del título del plato */
+    }
+
+    .menu-item p {
+        font-size: 0.9rem; /* Reduce el tamaño de la descripción */
+    }
+
+    .menu-item .price {
+        font-size: 1rem; /* Reduce el tamaño del precio */
+    }
+}
+
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 15px 15px;
+}
+
+.menu-item .price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.reviews-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.reviews-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff6b6b;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+footer {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 20px 10px; /* Espaciado interno */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+}
+
+footer p {
+    margin: 5px 0; /* Espaciado entre párrafos */
+}
+
+footer a {
+    color: #ff6b6b; /* Color rojo para los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+footer a:hover {
+    color: #ff4c4c; /* Cambia el color al pasar el mouse */
+}

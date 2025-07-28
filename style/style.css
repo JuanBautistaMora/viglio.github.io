@@ -30,21 +30,23 @@ header .logo {
     text-decoration: none;
 }
 
-header .menu-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
+.menu-btn {
+    background-color: #e4002b;
     color: white;
-    background: #ff6b6b;
+    padding: 10px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
-    text-transform: uppercase;
-    transition: background 0.3s ease;
-}
-
-header .menu-btn:hover {
-    background: #ff4c4c; /* Cambia el color al pasar el mouse */
-}
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .menu-btn:hover {
+    background-color: #c30022;
+    transform: scale(1.05);
+  }
+  
 
   .hero {
     position: relative; /* Asegura que los elementos hijos se posicionen relativos a este contenedor */
@@ -95,26 +97,86 @@ header .menu-btn:hover {
     margin-top: 0; /* Elimina cualquier margen superior */
 }
 
+/* MENU */
 .menu-section {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+    padding: 60px 20px;
+  }
+  
+  .menu-section h2 {
     text-align: center;
-}
-
-.menu-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 30px;
-    color: #333;
-    padding: 100px;
-}
-
-.menu-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    color: #e4002b;
+  }
+  
+  .menu-tabs {
+    display: flex;
+    justify-content: center;
     gap: 20px;
-    justify-items: center;
-    padding: 20px;
-}
+    flex-wrap: wrap;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 40px;
+  }
+  
+  .tab {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #999;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  
+  .tab.active {
+    color: #e4002b;
+    border-color: #e4002b;
+  }
+  
+  .menu-grid {
+    max-width: 1200px; /* 👈 límite como en La Veneziana */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 0 10px;
+  }
+  
+  
+  .menu-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .menu-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+    border-radius: 8px;
+  }
+  
+  .menu-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(228, 0, 43, 0.8);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: 0.4s;
+  }
+  
+  .menu-item:hover .overlay {
+    opacity: 1;
+  }
 
 @media (max-width: 768px) {
     .hero h1 {
@@ -124,103 +186,26 @@ header .menu-btn:hover {
     header {
         padding: 10px 20px; /* Reduce el padding del header */
     }
-
-    .menu-section h2 {
-        font-size: 2rem; /* Reduce el tamaño del título de la sección de menú */
-    }
-
-    .menu-items {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta las columnas para pantallas pequeñas */
-        gap: 15px; /* Reduce el espacio entre los elementos */
-    }
-
-    .menu-item {
-        padding: 10px; /* Reduce el padding interno de los elementos */
-        border-radius: 8px; /* Ajusta los bordes redondeados */
-    }
-
-    .menu-item img {
-        height: 150px; /* Reduce la altura de las imágenes */
-    }
-
-    .menu-item h3 {
-        font-size: 1.2rem; /* Reduce el tamaño del título del plato */
-    }
-
-    .menu-item p {
-        font-size: 0.9rem; /* Reduce el tamaño de la descripción */
-    }
-
-    .menu-item .price {
-        font-size: 1rem; /* Reduce el tamaño del precio */
-    }
-}
-
-.menu-item {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.menu-item:hover {
-    transform: scale(1.05);
-}
-
-.menu-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.menu-item h3 {
-    font-size: 1.5rem;
-    margin: 15px 0;
-    color: #333;
-}
-
-.menu-item p {
-    font-size: 1rem;
-    color: #666;
-    margin: 0 15px 15px;
-}
-
-.menu-item .price {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ff6b6b;
-    margin-bottom: 15px;
 }
 
 .reviews-section {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
     text-align: center;
-}
-
-.reviews-section h2 {
-    font-size: 2.5rem;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    position: relative;
+    background-color: white;
+  }
+  
+  .reviews-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #e4002b;
+    border-bottom: 2px solid #eee;
     display: inline-block;
-}
-
-.reviews-section h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #ff6b6b;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
+    padding-bottom: 10px;
+  }
+  
+  
 footer {
     background-color: #333; /* Fondo oscuro */
     color: white; /* Texto blanco */

@@ -4,184 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VIGLIO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="/style/style.css" />
 </head>
 <body>
-  <header>
-    <a href="#" class="logo">Viglio</a>
-    <button class="menu-btn" onclick="location.href='#menu'">Ir al Menú</button>
+  <header class="main-header">
+    <a href="#" class="logo">VIGLIO</a>
+    <button class="menu-btn" id="scrollMenuBtn">Ver Menú</button>
   </header>
+  
+
   <section class="hero">
-    <img src="/img/Captura de pantalla 2025-07-25 141454.png" alt="VIGLIO Logo" class="logo">
+    <img src="img/Captura de pantalla 2025-07-25 141454.png" alt="VIGLIO Logo" class="hero-img" />
     <h1>VIGLIO</h1>
     <p class="hero-subtitle">Vos también merecés disfrutar cada sabor</p>
   </section>
+
   <section id="menu" class="menu-section">
     <h2>Menú</h2>
-  
-    <!-- Sección de Comida -->
-    <h3>Comida</h3>
-    <div class="menu-items">
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130029 - copia.png" alt="Plato 1">
-        <h3>Plato 1</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$10.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130135 - copia.png" alt="Plato 2">
-        <h3>Plato 2</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$12.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130122 - copia.png" alt="Plato 3">
-        <h3>Plato 3</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$15.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130029 - copia.png" alt="Plato 4">
-        <h3>Plato 4</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$11.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130135 - copia.png" alt="Plato 5">
-        <h3>Plato 5</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$13.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130135 - copia.png" alt="Plato 6">
-        <h3>Plato 6</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$14.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130122 - copia.png" alt="Plato 7">
-        <h3>Plato 7</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$9.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130029 - copia.png" alt="Plato 8">
-        <h3>Plato 8</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$16.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130135 - copia.png" alt="Plato 9">
-        <h3>Plato 9</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$18.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130122 - copia.png" alt="Plato 10">
-        <h3>Plato 10</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$20.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130135 - copia.png" alt="Plato 10">
-        <h3>Plato 11</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$20.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130029 - copia.png" alt="Plato 10">
-        <h3>Plato 12</h3>
-        <p>Descripción breve del plato. Ingredientes principales.</p>
-        <span class="price">$20.00</span>
-      </div>
+    <div class="menu-tabs">
+      <button class="tab active" data-category="todos">Todos</button>
+      <button class="tab" data-category="batidos">Batidos</button>
+      <button class="tab" data-category="cafeteria">Cafetería</button>
+      <button class="tab" data-category="postres">Postres</button>
     </div>
-  
-    <!-- Sección de Postres -->
-    <h3>Postres</h3>
-    <div class="menu-items">
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130020 - copia.png" alt="Postre 1">
-        <h3>Postre 1</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$5.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130015 - copia.png" alt="Postre 2">
-        <h3>Postre 2</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$6.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130143 - copia.png" alt="Postre 3">
-        <h3>Postre 3</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$7.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130020 - copia.png" alt="Postre 4">
-        <h3>Postre 4</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$8.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130015 - copia.png" alt="Postre 5">
-        <h3>Postre 5</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$9.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130143 - copia.png" alt="Postre 6">
-        <h3>Postre 6</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$10.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130020 - copia.png" alt="Postre 7">
-        <h3>Postre 7</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$11.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130041 - copia.png" alt="Postre 8">
-        <h3>Postre 8</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$12.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130143 - copia.png" alt="Postre 9">
-        <h3>Postre 9</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$13.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130020 - copia.png" alt="Postre 10">
-        <h3>Postre 10</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$14.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130041 - copia.png" alt="Postre 10">
-        <h3>Postre 11</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$14.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="/img/Captura de pantalla 2025-07-25 130143 - copia.png" alt="Postre 10">
-        <h3>Postre 12</h3>
-        <p>Descripción breve del postre. Ingredientes principales.</p>
-        <span class="price">$14.00</span>
-      </div>
-    </div>
+
+    <div class="menu-grid" id="menu-items"></div>
   </section>
-  <section id="reviews" class="reviews-section">
-    <h2>¿Qué dicen sobre nosotros?</h2> 
-    <script defer async src='https://cdn.trustindex.io/loader.js?981d0af50391799442660119149'></script>
+
+  <section class="reviews-section">
+    <h2>¿Qué dicen sobre nosotros?</h2>
+    <script defer async src="https://cdn.trustindex.io/loader.js?981d0af50391799442660119149"></script>
   </section>
+
   <footer>
     <p>&copy; 2025 VIGLIO. Todos los derechos reservados.</p>
     <p><a href="/privacy.html">Política de privacidad</a> | <a href="/terms.html">Términos de servicio</a></p>
   </footer>
- 
+
+  <script>
+    const itemsContainer = document.getElementById('menu-items');
+    const tabs = document.querySelectorAll('.tab');
+
+    const menuData = {
+      batidos: [
+        { nombre: "Banana Shake", img: "https://scontent.faep14-4.fna.fbcdn.net/v/t51.75761-15/500015979_18505245163043575_4389495698023028451_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=l7IDoI6gst8Q7kNvwGqL-Om&_nc_oc=AdnbBkye8UcPyasaQHEYbuormPLuz8kG6t3E_x9EhQS7RMjVwvH454wx08XzRe68QKmmLmntvNeCkPQ07jTYv5Sj&_nc_zt=23&_nc_ht=scontent.faep14-4.fna&_nc_gid=ZzeDgoaH163Rhw5UGc7p_Q&oh=00_AfQswT8QezeO48EI_y0m9JUuIncxicjmZJ0bMqnvkZP9zg&oe=688D72DF" },
+        { nombre: "Naranjas Smoothie", img: "https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/490742079_1221684466631109_3619130899138204587_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5A-oBoTJdnkQ7kNvwGm5fZ-&_nc_oc=AdmZ6m3xMFfFDXdLzHA7xwj9OvrinZdqOqTAXQuTtk_YcrlcOAIrkrDtuhdiRw1ummDS5t_-CeGAARx40tMJjxAT&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=Mf9U5LtljVhexuWjFt7sUA&oh=00_AfTfbgQtRZEv3_ciWVFxn5LPn-7dMtPfZ7lRfjAvY2TyiA&oe=688D7AF6" },
+        { nombre: "Green Smoothie", img: "https://scontent.faep14-2.fna.fbcdn.net/v/t51.75761-15/499544625_18505245172043575_590731138313260890_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rQl6BnPv1lEQ7kNvwFXI6Ry&_nc_oc=Adlc50wQdT4ztawVHXO1jBr88nkTUpfDT5idvWIxS78Ysh3fCYxaO3zo7OVZ2YeMQ-Es27JBhCNP2waW_UWJJuMt&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=ZzeDgoaH163Rhw5UGc7p_Q&oh=00_AfSKpCrdyMM9qwI8L6Hnggkf0of23yo3huFabUC7aYcjKQ&oe=688D579C" }
+      ],
+      cafeteria: [
+        { nombre: "Ensalada", img: "https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/471622398_18477202996043575_3056750409087397292_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=PcgkgRCYqnkQ7kNvwGhmcqi&_nc_oc=AdkWe1h2XibLsnmlo_ACR-amanzqtUEbUbRmXuTnFHNp-EWY-26Wd4WUbWG57uGVNgr3NAmhCIMBcRRHxk0stO_q&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=R_V9vbaroQKPmnYUtqOmgg&oh=00_AfTy21c5DVEviqVOTsGU7mBq9FUZWtuMv7YLZ7tpgRsrVA&oe=688D6DD7" },
+        { nombre: "Sorrentinos De Ojo de Bife", img: "https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/492698609_1233132395486316_1141245390395725082_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wLjhALxjphcQ7kNvwHOiUgy&_nc_oc=Adm9BD5TH55pV_a7pY1DDqAFhsv-ap4yCS3nZHDILjt2mOfIUIcBR1orar3831vOio0jXptW4oB4NYpejtlVr5Bx&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=hdesnZno0Eai13QKv61jsg&oh=00_AfQnhasvHiiLuSl3TxrDR_yK9GChgsNpKr7DlopBl8Ye1Q&oe=688D53C9" },
+        { nombre: "Milanesa Napolitana", img: "https://scontent.faep14-2.fna.fbcdn.net/v/t51.75761-15/466727703_18468585841043575_5400735572680535317_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lF8ObWZX3oQQ7kNvwG2WE_v&_nc_oc=Adm1vRf0QRPF-vFHYMSRSZ032J8XoeSyjCRhHYKWMAeABo0QfJf5varP9M_yIqf0EmJpkFtKnTX_qHyRcWbgSjB9&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=kjevChjxhjr1XM0j8BXo-Q&oh=00_AfS419-qfEWD_zOnq3v3xCZVPbUEX60w4qVWAtRRuywqRA&oe=688D5B3C" }
+      ],
+      postres: [
+        { nombre: "Cheesecake", img: "https://scontent.faep14-2.fna.fbcdn.net/v/t51.75761-15/514448476_18513330928043575_468539087575811110_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zWTz5AqRtFEQ7kNvwF68wR8&_nc_oc=AdnboTWehZJSkIdUgnEfirVAwgBH6YSeuI9nKC1CWxItdsSqIf8iVRUeNrUN_pQsTeRc8excU8WQd8Cs5KYB5h_V&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=Fb4MAQdkNQvXKraMe06BHA&oh=00_AfS7HWMIQa4rZF7vhwDXOlGovyReu8NwqrbEhhPoWXMDSg&oe=688D42EA" },
+        { nombre: "Tiramisú", img: "https://scontent.faep14-3.fna.fbcdn.net/v/t51.75761-15/496876057_18504311365043575_4092593799917747281_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=VH-CRKnUHiMQ7kNvwEoVl60&_nc_oc=AdkAh5_xt9F1Xg1T_ORMIuQr5CTgVjSNFpw1OAZMJF3cb1Q2BJIzIpTB9yIHf4qq00G01ZptOlp0cotKLe9csNk1&_nc_zt=23&_nc_ht=scontent.faep14-3.fna&_nc_gid=0N4HRGdaVjYBIavitOTgPg&oh=00_AfStokvzKqSbyHW9RW5_QCn2ZyLp0AZDTV0aVkSwriAJBA&oe=688D4E0A" },
+        { nombre: "Brownie", img: "https://scontent.faep14-2.fna.fbcdn.net/v/t51.75761-15/487973769_18495930841043575_5469319783004966055_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lUW1VtoqCU8Q7kNvwE542GW&_nc_oc=AdnRAg7bNtEoyS0fKKmn-NA8IcEWWj9f7--IxyrBlHvyzZpUBCfeZWlemz7Trc-aPTXt_RCdac4dW3KZpPbUIpQL&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=DF26EvNks-awfwtySWKc-Q&oh=00_AfSl6dz-cJGj0ia1pyR6nHoG_TMKQ7GIxFCpXGdwD9dICg&oe=688D5C3A" }
+      ]
+    };
+
+    menuData.todos = [...menuData.batidos, ...menuData.cafeteria, ...menuData.postres];
+
+    function mostrarItems(categoria) {
+      itemsContainer.innerHTML = "";
+      menuData[categoria].forEach(item => {
+        const div = document.createElement("div");
+        div.className = "menu-item";
+        div.innerHTML = `
+          <img src="${item.img}" alt="${item.nombre}" />
+          <div class="overlay">
+            <p>${item.nombre}</p>
+          </div>`;
+        itemsContainer.appendChild(div);
+      });
+    }
+
+    tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+    mostrarItems(tab.dataset.category);
+    // Eliminamos el scrollIntoView para evitar el salto molesto
+  });
+});
+
+mostrarItems("todos");
+// Scroll suave al menú
+document.getElementById("scrollMenuBtn").addEventListener("click", () => {
+  document.getElementById("menu").scrollIntoView({ behavior: 'smooth' });
+});
+
+  </script>
 </body>
 </html>
